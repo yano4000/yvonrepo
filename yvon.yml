@@ -1,0 +1,10 @@
+---
+- name: Modifying /etc/issue contents
+  hosts: dev
+  become: true
+  tasks:
+    - name: replace /etc/issue content with proxy
+      copy:
+	content: "dev"
+	dest: /etc/issue
+      
