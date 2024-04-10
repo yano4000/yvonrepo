@@ -1,0 +1,10 @@
+---
+- name: Install lsof
+  hosts: dev
+  become: true
+  tasks:
+    - name: install
+      dnf:
+        name: lsof
+        state: present
+
