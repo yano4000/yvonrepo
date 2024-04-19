@@ -1,0 +1,23 @@
+---
+- name: Config cron for user amos
+  hosts: dev
+  become: true
+  tasks:
+    - name: amos cron
+      cron:
+        name: "im practicing for interview"
+        user: amos
+        minute: '*/8'
+        job: logger "i got my first sys admin this year amen"
+
+
+
+
+
+
+
+
+
+
+
+
